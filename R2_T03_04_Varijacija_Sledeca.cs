@@ -12,9 +12,9 @@ class R2_T03_Rekurzije_04_Kombinatorika
 {
     static void Main()
     {
-        Varijacija();
+        Varijacija_Sledeca_Zadatak();
     }
-    static void Varijacija()
+    static void Varijacija_Sledeca_Zadatak()
     {
         int k = int.Parse(Console.ReadLine());              // k: 1 <= k <= 100 : Varijacija duzine k       : 5
         int n = int.Parse(Console.ReadLine());              // n: 1 <= n <= 100 : Varijacija od n elemenata : 4
