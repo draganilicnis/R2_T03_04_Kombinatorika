@@ -39,7 +39,7 @@ class R2_T03_Rekurzije_04_Kombinatorika
         int k = a.Length;                                       // k: 1 <= k <= 100 : Varijacija duzine k   : 5
         int i = k - 1;                                          // Od kraja varijacije (sa desne strane) tražimo prvi element koji se moze povecati
         for (i = k - 1; i >= 0 && a[i] == n; i--) a[i] = 1;     // i istovremeno sve elemente sa desne strane (od kraja do prelomne tacke) postavljamo na najmanju vrednost: 1
-        if (i < 0) return false;                                // Sako ako su svi elementi jednaki n => ne postoji naredna varijacija
+        if (i < 0) return false;                                // Samo ako su svi elementi jednaki n => ne postoji naredna varijacija
         a[i]++;                                                 // Uvecavamo element koji je moguće uvecati
         return true;
     }
