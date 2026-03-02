@@ -9,7 +9,9 @@ class R2_T03_Rek_04_Komb_Ver_000
 
         int n = int.Parse(Console.ReadLine());      // N: Broj elemenata skupa
         int k = int.Parse(Console.ReadLine());      // K: Duzina
-        Varijacije(n, k);
+        // Varijacije(n, k);
+        int[] a = new int[k];
+        Varijacija_Sledeca_Izracunaj_Rekurz(a, n, k);
     }
 
     static void Dvocifreni()                                    // O(N^2)
@@ -68,5 +70,15 @@ class R2_T03_Rek_04_Komb_Ver_000
         if (i < 0) return false;
         a[i]++;
         return true;
+    }
+    static void Varijacija_Sledeca_Izracunaj_Rekurz(int[] a, int n, int k)
+    {
+        if (k == 0) Niz_Ispisi(a);
+        else
+            for (int nn = 0; nn < n; nn++)
+            {
+                a[a.Length - k] = nn;
+                Varijacija_Sledeca_Izracunaj_Rekurz(a, n, k - 1); 
+            }
     }
 }
