@@ -26,7 +26,8 @@ class R2_T03_Rek_04_Komb_Dopuna_binarnih_nizova_bez_susednih_1_v003
         int k = a.Length;                                       // Duzina niza
         int i = k - 1;                                          // Pozicija poslednjeg elementa u nizu (najmanje tezine)
         for (i = k - 1; i >= 0 && (a[i] == n - 1 || s[i] != '.'); i--) 
-            a[i] = 0;                                           // Sledeca varijacija
+            if (s[i] == '.')
+                a[i] = 0;                                       // Sledeca varijacija
         if (i < 0) return false;                                // Ako je poslednja varijacija, odnosno ne postoji sledeca varijacija
         a[i]++;                                                 // Ako postoji sledeca varijacija
         return true;
